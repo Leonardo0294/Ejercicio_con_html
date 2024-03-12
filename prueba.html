@@ -24,8 +24,8 @@
     <label id="textoResultado"></label> <!-- Aquí se mostrará el resultado de la validación -->
 <script>
     function ejecutar() {
-        var textoIngresado = document.getElementById("textoInput").value; // Obtener el texto ingresado
-        var textoResultado = document.getElementById("textoResultado");
+        let textoIngresado = document.getElementById("textoInput").value; // Obtener el texto ingresado
+        let textoResultado = document.getElementById("textoResultado");
 
         if (textoIngresado.trim() === "") { // Validar si el texto está vacío
             textoResultado.innerText = "Cargue algo por favor";
@@ -37,8 +37,11 @@
         alert("Se ha cargado el siguiente texto: " + textoIngresado); // Mostrar alerta con el texto cargado
         console.log("Texto cargado:", textoIngresado); // Imprimir en consola el texto cargado
 
-        // Mostrar el resultado de la validación
-        textoResultado.style.display = "none"; // Ocultar la etiqueta de resultado
+        // Ocultar la etiqueta de resultado
+        textoResultado.style.display = "none";
+        
+        // Restablecer el valor del input a una cadena vacía
+        document.getElementById("textoInput").value = "";
     }
 </script>
 </body>
